@@ -79,7 +79,6 @@ jobs:
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-igbvf.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-r8168.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-redpill.json
-          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-v9fs.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-via-velocity.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/redpill-acpid.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/redpill-boot-wait.json
