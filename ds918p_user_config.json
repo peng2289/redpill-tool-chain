@@ -1,0 +1,18 @@
+{
+    "extra_cmdline": {
+        "pid": "0x1666",
+        "vid": "0x048D",
+        "sn": "1980PDN002821",
+        "mac1": "00F0D2D0B5DB",
+	"SataPortMap": "24",
+	"DiskIdxMap": "0400",
+	"SasIdxMap": "0",
+	"netif_num": 1
+    },
+    "synoinfo": {
+    	"internalportcfg": "0xffff",
+		"maxlanport": "7"
+    },
+    "ramdisk_copy": {},
+    "extensions": []
+}
