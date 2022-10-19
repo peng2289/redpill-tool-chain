@@ -21,8 +21,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* && \
     curl --progress-bar --output /usr/bin/jq --location https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && chmod +x /usr/bin/jq
 
-ARG REDPILL_LKM_REPO=https://github.com/RedPill-TTG/redpill-lkm.git
-ARG REDPILL_LKM_BRANCH=master
+ARG REDPILL_LKM_REPO=https://github.com/peng2289/redpill-lkm.git
+ARG REDPILL_LKM_BRANCH=custom
 ARG REDPILL_LKM_SRC=/opt/redpill-lkm
 
 ARG REDPILL_LOAD_REPO=https://github.com/RedPill-TTG/redpill-load.git

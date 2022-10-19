@@ -387,6 +387,33 @@
       }
     },
     {
+      "id": "ds918p-7.1.1-42962",
+      "platform_name": "DS918+",
+      "platform_version": "apollolake-7.1.1-42962",
+      "user_config_json": "ds918p_user_config.json",
+      "docker_base_image": "debian:10-slim",
+      "compile_with": "toolkit_dev",
+      "redpill_lkm_make_target": "test-v7",
+      "downloads": {
+        "kernel": {
+          "url": "https://sourceforge.net/projects/dsgpl/files/Synology%20NAS%20GPL%20Source/25426branch/apollolake-source/linux-4.4.x.txz/download",
+          "sha256": "af815ee065775d2e569fd7176e25c8ba7ee17a03361557975c8e5a4b64230c5b"
+        },
+        "toolkit_dev": {
+          "url": "https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz/download",
+          "sha256": "d349fa644392d4cfab8191243ee38aaa32bd517208c144678e0c855cb5a619ea"
+        }
+      },
+      "redpill_lkm": {
+        "source_url": "https://github.com/peng2289/redpill-lkm.git",
+        "branch": "custom"
+      },
+      "redpill_load": {
+        "source_url": "https://github.com/pocopico/redpill-load.git",
+        "branch": "develop"
+      }
+    },
+    {
       "id": "ds920p-7.0.1-42218",
       "platform_name": "DS920+",
       "platform_version": "geminilake-7.0.1-42218",
