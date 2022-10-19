@@ -1,6 +1,6 @@
 {
   "id": "pocopico.igbvf",
-  "url": "https://raw.githubusercontent.com/pocopico/rp-ext/master/igbvf/rpext-index.json",
+  "url": "https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-igbvf.json",
   "info": {
     "name": "igbvf",
     "description": "Adds Intel(R) Gigabit Virtual Function Network Driver Support",

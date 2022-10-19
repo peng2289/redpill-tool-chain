@@ -217,7 +217,7 @@ Actions: build, auto, run, clean, add, del, sn, pat
             DS3615xs DS3617xs DS916+ DS918+ DS920+ DS3622xs+ FS6400 DVA3219 DVA3221 DS1621+
             eg: sn ds920p
 
-- pat:      For decoding PAT file. see: https://github.com/tossp/redpill-tool-chain/blob/master/.github/workflows/pat.yml
+- pat:      For decoding PAT file. see: https://github.com/peng2289/redpill-tool-chain/blob/master/.github/workflows/pat.yml
 
 Available platform versions:
 ---------------------

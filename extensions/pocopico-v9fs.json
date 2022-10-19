@@ -1,6 +1,6 @@
 {
   "id": "pocopico.v9fs",
-  "url": "https://raw.githubusercontent.com/pocopico/rp-ext/master/v9fs/rpext-index.json",
+  "url": "https://raw.githubusercontent.com/peng2289/redpill-tool-chain/master/extensions/pocopico-v9fs.json",
   "info": {
     "name": "v9fs",
     "description": "Adds  Support",

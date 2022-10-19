@@ -1,6 +1,6 @@
 # RedPill Tool Chain
 
-[![构建](https://github.com/tossp/redpill-tool-chain/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/tossp/redpill-tool-chain/actions/workflows/test.yml)
+[![构建](https://github.com/peng2289/redpill-tool-chain/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/peng2289/redpill-tool-chain/actions/workflows/test.yml)
 
 这是一个测试项目，可能会有不可预测的事情发生（比如：毁损数据、烧毁硬件等等），请**谨慎使用**。
 
@@ -46,12 +46,12 @@
 
 ---
 ⚠️⚠️⚠️
-由于各版本环境不完全一致，制作策略会有细节变化，具体可以参考 [工作流配置文件](https://github.com/tossp/redpill-tool-chain/blob/master/.github/workflows/test.yml)
+由于各版本环境不完全一致，制作策略会有细节变化，具体可以参考 [工作流配置文件](https://github.com/peng2289/redpill-tool-chain/blob/master/.github/workflows/test.yml)
 
-在 [Gtihub Actions](https://github.com/tossp/redpill-tool-chain/actions) 中查看执行结果，并下载生成的镜像
+在 [Gtihub Actions](https://github.com/peng2289/redpill-tool-chain/actions) 中查看执行结果，并下载生成的镜像
 
 ❗❗❗
-[工作流配置文件](https://github.com/tossp/redpill-tool-chain/blob/master/.github/workflows/test.yml) 中引入的扩展都是推荐必装扩展
+[工作流配置文件](https://github.com/peng2289/redpill-tool-chain/blob/master/.github/workflows/test.yml) 中引入的扩展都是推荐必装扩展
 
 ---
 
@@ -159,4 +159,4 @@ Check global_settings.json for settings.
 
 编译`DS920+`和`DS1621+`需要加入`jumkey.dtb`扩展并参考[这里](https://github.com/jumkey/redpill-load/blob/develop/redpill-dtb/README.md)创建设备的二进制设备树
 
-查看基于[test.yml](https://github.com/tossp/redpill-tool-chain/blob/master/.github/workflows/test.yml)的使用[示例](https://github.com/tossp/redpill-tool-chain/actions/workflows/test.yml)
+查看基于[test.yml](https://github.com/peng2289/redpill-tool-chain/blob/master/.github/workflows/test.yml)的使用[示例](https://github.com/peng2289/redpill-tool-chain/actions/workflows/test.yml)
