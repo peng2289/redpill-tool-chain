@@ -1,15 +1,15 @@
 {
     "extra_cmdline": {
-        "pid": "0x1234",
-        "vid": "0x048D",
-        "sn": "1980PDN002821",
-        "mac1": "00F0D2D0B5DB",
+		"pid": "0x1234",
+		"vid": "0x048D",
+		"sn": "1980PDN002821",
+		"mac1": "00F0D2D0B5DB",
 		"SataPortMap": "24",
 		"DiskIdxMap": "1000",
 		"netif_num": 1
     },
     "synoinfo": {
-    	"maxdisks": "6",
+		"maxdisks": "6",
 		"maxlanport": "1"
     },
     "ramdisk_copy": {},
