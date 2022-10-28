@@ -1,0 +1,87 @@
+name: 构建
+
+on:
+  workflow_dispatch:
+    inputs:
+      clean_cache:
+        description: 'Clear caches'
+        required: false
+        type: boolean
+  push:
+    branches:
+      - master
+    paths:
+      - "docker/**"
+      - "**.sh"
+      - "**.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: 编译 "${{matrix.platform}} ${{matrix.version}}"
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          #  两行一组，删除不需要的版本
+          
+          - platform: ds918p
+            version: 7.1.1-42962
+
+    steps:
+      - name: 检出项目文件
+        uses: actions/checkout@v3
+
+      - name: 缓存加速
+        uses: actions/cache@v3
+        with:
+          path: |
+            cache/*.pat
+            cache/*.org
+            docker/downloads/*.txz
+          key: ${{matrix.platform}}-${{matrix.version}}-${{ hashFiles('global_config.json') }}
+          restore-keys: ${{matrix.platform}}-${{matrix.version}}-
+
+      - name: 清理缓存
+        if: "${{ github.event.inputs.clean_cache == 'true' }}"
+        run: |
+          rm -rf cache/*.pat
+          rm -rf cache/*.org
+          rm -rf docker/downloads/*.txz
+
+      - name: 准备构建环境
+        run: |
+          ./redpill_tool_chain.sh build ${{matrix.platform}}-${{matrix.version}}
+
+      - name: 配置引导镜像
+        run: |
+
+          cat ${{matrix.platform}}_user_config.json
+
+      - name: 添加扩展驱动[ds918p]
+        if: matrix.platform == 'ds918p'
+        run: |
+          ./redpill_tool_chain.sh add https://github.com/peng2289/redpill-load/raw/develop/redpill-boot-wait/rpext-index.json
+          ./redpill_tool_chain.sh add https://github.com/peng2289/redpill-load/raw/develop/redpill-acpid/rpext-index.json
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/igb/rpext-index.json
+
+      - name: 添加 Misc shell
+        run: |
+          ./redpill_tool_chain.sh add https://github.com/peng2289/redpill-load/raw/develop/redpill-misc/rpext-index.json
+
+      - name: 编译引导镜像
+        run: |
+          ./redpill_tool_chain.sh auto ${{matrix.platform}}-${{matrix.version}}
+
+      - name: 上传引导镜像到 github actions
+        uses: actions/upload-artifact@v3
+        with:
+          name: dsm-${{matrix.platform}}-${{matrix.version}}
+          path: images/redpill-*.img
+          if-no-files-found: error
+
+      - name: 删除旧的工作流
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          retain_days: 1
+          keep_minimum_runs: 3

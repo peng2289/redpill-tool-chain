@@ -406,10 +406,10 @@
       },
       "redpill_lkm": {
         "source_url": "https://github.com/peng2289/redpill-lkm.git",
-        "branch": "custom"
+        "branch": "master"
       },
       "redpill_load": {
-        "source_url": "https://github.com/pocopico/redpill-load.git",
+        "source_url": "https://github.com/peng2289/redpill-load.git",
         "branch": "develop"
       }
     },

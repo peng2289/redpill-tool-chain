@@ -4,14 +4,13 @@
         "vid": "0x048D",
         "sn": "1980PDN002821",
         "mac1": "00F0D2D0B5DB",
-	"SataPortMap": "24",
-	"DiskIdxMap": "0400",
-	"SasIdxMap": "0",
-	"netif_num": 1
+		"SataPortMap": "24",
+		"DiskIdxMap": "1000",
+		"netif_num": 1
     },
     "synoinfo": {
-    	"internalportcfg": "0xffff",
-		"maxlanport": "7"
+    	"maxdisks": "6",
+		"maxlanport": "1"
     },
     "ramdisk_copy": {},
     "extensions": []
