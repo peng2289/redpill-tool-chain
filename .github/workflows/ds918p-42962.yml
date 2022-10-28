@@ -1,4 +1,4 @@
-name: 构建
+name: 构建 ds918p_7.1.1-42962 "$(date +"%Y.%m.%d-%H%M")"
 
 on:
   workflow_dispatch:
